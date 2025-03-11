@@ -1,0 +1,71 @@
+--create proc MusteriEkle
+--(
+--@Ad nvarchar(50),
+--@Soyad nvarchar(50),
+--@Mail nvarchar(50),
+--@Telefon nvarchar(50),
+--@Adres nvarchar(50),
+--@SubeNo int
+--)
+--as
+--begin
+--insert Customer values(@Ad,@Soyad,@Mail,@Telefon,@Adres,@SubeNo)
+--end
+--exec MusteriEkle 'Mehmet','Akkus','mehmet@','054624214','Þirinevler','1'
+--select*from Customer
+
+
+--create proc ElemanEkle
+--(
+--@Ad nvarchar(50),
+--@Soyad nvarchar(50),
+--@Pozisyon nvarchar(50),
+--@Maas int,
+--@SubeNo int
+--)
+--as
+--begin
+--insert Employees values(@Ad,@Soyad,@Pozisyon,@Maas,@SubeNo)
+--end
+--exec ElemanEkle 'Hilal','Yavuzer','Yönetici','80000','1'
+--select * from Employees
+
+
+--create proc ElemanSil
+--(
+--@Ad nvarchar(50),
+--@Soyad nvarchar(50),
+--@Pozisyon nvarchar(50),
+--@Maas int,
+--@SubeNo int
+--)
+--as
+--BEGIN
+--    DELETE FROM Employees 
+--    WHERE FirstName = @Ad 
+--      AND LastName = @Soyad
+--      AND Position = @Pozisyon
+--      AND Salary = @Maas
+--      AND BranchId = @SubeNo;
+--END
+--exec ElemanSil 'Hilal','Yavuzer','Yönetici','80000','1'
+--select * from Employees
+
+--create proc KesintiUcreti
+--(
+--@HesapId int,
+--@KesintiTipi nvarchar(50),
+--@Tutar money,
+--@KesintiTarihi date
+--)
+--as
+--begin
+--Update Fees
+--SET 
+--        FeeType = @KesintiTipi,
+--        FeeAmount = @Tutar,
+--        FeeDate = @KesintiTarihi
+--    WHERE AccountId = @HesapId
+--end
+--exec KesintiUcreti 1,'Vergi', 500.00, '2024-02-26'
+--select * from Fees
