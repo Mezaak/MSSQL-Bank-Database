@@ -1,2 +1,2 @@
 # MSSQL-Bank-Database
-MSSQL,SQL Database Table script
+MSSQL,SQL Database Table Placeholder Script
