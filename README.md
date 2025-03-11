@@ -8,7 +8,7 @@
 
 ## About The Project
 
-<img style="height:300px;weight:auto" src="">
+<img style="height:300px;weight:auto" src="https://raw.githubusercontent.com/Mezaak/MSSQL-Bank-Database/refs/heads/main/bankdatabasediagram.png">
 
 For starting you should name your database as "Bank"
 MSSQL,SQL Database Table Placeholder Script
